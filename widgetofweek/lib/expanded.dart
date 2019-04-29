@@ -9,8 +9,27 @@ class WowExpanded extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: Container(
-            color: Colors.blue,
-            child: WowSafeArea()
+            //color: Colors.blue,
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topRight: Radius.circular(5), bottomRight: Radius.circular(40)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.yellow[900],
+                  offset: Offset(0, 2)
+                )
+              ],
+              gradient: LinearGradient(
+                colors: [
+                  Colors.yellow[400],
+                  Colors.yellow[500],
+                  Colors.yellow[600],
+                  Colors.yellow[800]
+                ]
+              )
+            ),
+            child: WowSafeArea(),
+
           ),
           flex: 10,
         ),
